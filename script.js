@@ -1,26 +1,18 @@
-
-
 const  player1 = document.getElementsByClassName("img1")[0],
        player2 = document.getElementsByClassName("img2")[0];
 
 const  banner = document.getElementById("topnotice"),
        rollButton = document.getElementById("rollbutton");
-var    rolled = false;
 
-rollButton.addEventListener("click", rollDice);
-rollButton.addEventListener("keydown", (e) =>{
-    if(e.key===" " && !rolled){
-        e.preventDefault();
-        rollDice();
-        rolled=true;
-    }
+rollButton.addEventListener("click", ()=>{
+    rollDice();
 });
-rollButton.addEventListener("keyup",(e)=>{
+document.addEventListener("keyup", (e)=>{
     if(e.key===" "){
         e.preventDefault();
-        rolled=false;
+        rollDice();
     }
-})
+});
 
 function rollDice(){
     var randomVar1 = Math.ceil(Math.random()*6),
