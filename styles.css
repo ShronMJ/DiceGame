@@ -1,14 +1,13 @@
-
-body, .topcont{
-  background-color: #1b4486;
-  overflow: hidden;
+*{
+  font-family: sans-serif;
 }
 
-.container {
+.game-room {
   padding-bottom: 3%;
+  padding-top: 2%;
+  margin-top: -0.9%;
   text-align: center;
-  background-color: #393E46;
-  margin: 0;
+  background-color: #1b4486;
 }
 
 .dice {
@@ -17,7 +16,7 @@ body, .topcont{
 
 }
 
-.container .dice > p {
+.game-room .dice > p {
   font-size: 2rem;
   color: #4ECCA3;
   font-family: 'Indie Flower', cursive;
@@ -34,4 +33,17 @@ footer {
   font-family: 'Indie Flower', cursive;
   background-color: #393E46;
   justify-content:center;
+}
+
+@media(max-width:576px){
+
+  .game-room {
+    padding-bottom: 6%;
+    padding-top: 6%;
+    margin-top: -0.9%;
+  }
+  img {
+    width: 50%;
+  }
+
 }
